@@ -1,0 +1,23 @@
+.invitation {
+    &__title {
+        font-family: "Playfair Display", sans-serif;
+        font-style: normal;
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: 1.4px;
+        text-align: center;
+        margin: 70px 0px 20px 0px;
+        // padding: 0px 30px;
+    }
+
+    &__text {
+        font-family: "Playfair Display", sans-serif;
+        font-style: normal;
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: 1.4px;
+        text-align: center;
+        padding: 0px 5px;
+
+    }
+}

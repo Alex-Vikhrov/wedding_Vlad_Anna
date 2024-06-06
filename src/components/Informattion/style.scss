@@ -1,0 +1,46 @@
+.information {
+    &__title {
+        font-family: "Caravan", sans-serif;
+        font-style: normal;
+        font-size: 80px;
+        font-weight: 400;
+        letter-spacing: 1.4px;
+        text-align: center;
+        margin: 50px 0px 50px 0px;
+        padding: 0px 30px;
+        color: #333;
+    }
+
+    &__text {
+        font-family: "Playfair Display", sans-serif;
+        font-style: normal;
+        font-size: 1.1rem;
+        font-weight: 400;
+        letter-spacing: 1.4px;
+        text-align: center;
+        margin: 0px 0px 20px 0px;
+        padding: 0px 30px;
+
+    }
+
+    &__tel {
+        display: block;
+        font-family: "Great Vibes", sans-serif;
+        font-style: normal;
+        font-size: 1.8rem;
+        font-weight: 500;
+        letter-spacing: 1.4px;
+        text-align: center;
+        margin: 0px 0px 20px 0px;
+        padding: 0px 30px;
+        list-style: none;
+        text-decoration: none;
+        color: #AD8955;
+
+        &:hover {
+            cursor: pointer;
+            color: #d17a01;
+            transition: 0.3s;
+        }
+    }
+}
