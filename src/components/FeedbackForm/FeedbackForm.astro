@@ -1,0 +1,92 @@
+---
+// Import the sendMail function from your TypeScript file
+// import sendMail from './sendMail';
+---
+
+<style>
+  form {
+    display: flex;
+    flex-direction: column;
+    margin: 100px 0px;
+  }
+  label {
+    margin-top: 1em;
+  }
+  button {
+    margin-top: 1em;
+  }
+</style>
+
+<form id="feedback-form">
+  <label>
+    Имя:
+    <input type="text" name="firstName" required />
+  </label>
+  <label>
+    Фамилия:
+    <input type="text" name="lastName" required />
+  </label>
+  <label>
+    Пожалуйста, подтвердите своё присутствие до 22.06.2024:
+    <select name="attendance" required>
+      <option value="yes">Обязательно буду</option>
+      <option value="no">Не смогу пойти</option>
+    </select>
+  </label>
+  <label>
+    С кем вы пойдете на праздник?
+    <input type="text" name="companions" />
+  </label>
+  <label>
+    Будут ли с вами дети?
+    <input type="text" name="children" />
+  </label>
+  <label>
+    Уточните есть ли у вас аллергия на какие-то продукты или особенности питания:
+    <textarea name="dietary" rows="4"></textarea>
+  </label>
+  <button type="submit">Отправить</button>
+</form>
+
+<!-- <script type="module">
+//   import sendMail from './sendMail';
+
+//   document.getElementById('feedback-form').addEventListener('submit', async (e) => {
+//     e.preventDefault();
+//     const formData = new FormData(e.target);
+//     const data = Object.fromEntries(formData.entries());
+    
+//     try {
+//       await sendMail(data);
+//       alert('Ваши данные успешно отправлены!');
+//     } catch (error) {
+//       alert('Произошла ошибка при отправке данных.');
+//     }
+//   });
+</script> -->
+
+<script type="module">
+  document.getElementById('feedback-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch('/send-mail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        alert('Ваши данные успешно отправлены!');
+      } else {
+        alert('Произошла ошибка при отправке данных.');
+      }
+    } catch (error) {
+      alert('Произошла ошибка при отправке данных.');
+    }
+  });
+</script>

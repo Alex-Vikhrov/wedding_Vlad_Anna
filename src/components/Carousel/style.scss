@@ -21,11 +21,13 @@
 
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
-        display: none;
+        // display: none;
+        // background-color: black;
     }
 
     .carousel-indicators button {
-        background-color: black;
+        // display: none;
+        background-color: rgb(255, 255, 255);
     }
 }
 
