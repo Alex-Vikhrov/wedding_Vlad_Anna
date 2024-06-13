@@ -5,7 +5,7 @@ const settings = {
     y: 30,
   },
   scrollTrigger: {
-    start: 'top 90%',
+    start: 'top 82%',
     end: '+=100',
   },
 };
