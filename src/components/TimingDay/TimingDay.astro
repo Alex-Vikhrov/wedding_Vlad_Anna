@@ -1,5 +1,11 @@
 ---
 import './style.scss';
+import { Image } from 'astro:assets';
+import icon_1 from '../../../public/12.svg';
+import icon_2 from '../../../public/icons/3.svg';
+import icon_3 from '../../../public/icons/4.svg';
+import icon_4 from '../../../public/icons/5.svg';
+import icon_5 from '../../../public/icons/7.svg';
 ---
 
 <section class="timing-day">
@@ -9,7 +15,8 @@ import './style.scss';
     <div class="vertical-line">
       <div class="segment">
         <div class="icon">
-          <img src="public/12.svg" class="icon__img" />
+          <Image src={icon_1} alt="icon_1" loading="eager" class="icon__img" />
+          <!-- <img src="public/12.svg" class="icon__img" /> -->
         </div>
         <div class="dot"></div>
         <div class="text">
@@ -19,7 +26,8 @@ import './style.scss';
       </div>
       <div class="segment">
         <div class="icon">
-          <img src="public/icons/3.svg" class="icon__img" />
+          <!-- <img src="public/icons/3.svg" class="icon__img" /> -->
+          <Image src={icon_2} alt="icon_2" loading="eager" class="icon__img" />
         </div>
         <div class="dot"></div>
         <div class="text">
@@ -29,7 +37,8 @@ import './style.scss';
       </div>
       <div class="segment">
         <div class="icon">
-          <img src="public/icons/4.svg" class="icon__img" />
+          <!-- <img src="public/icons/4.svg" class="icon__img" /> -->
+          <Image src={icon_3} alt="icon_3" loading="eager" class="icon__img" />
         </div>
         <div class="dot"></div>
         <div class="text">
@@ -39,7 +48,8 @@ import './style.scss';
       </div>
       <div class="segment">
         <div class="icon">
-          <img src="public/icons/5.svg" class="icon__img" />
+          <!-- <img src="public/icons/5.svg" class="icon__img" /> -->
+          <Image src={icon_4} alt="icon_4" loading="eager" class="icon__img" />
         </div>
         <div class="dot"></div>
         <div class="text">
@@ -49,7 +59,8 @@ import './style.scss';
       </div>
       <div class="segment">
         <div class="icon">
-          <img src="public/icons/7.svg" class="icon__img" />
+          <!-- <img src="public/icons/7.svg" class="icon__img" /> -->
+          <Image src={icon_5} alt="icon_5" loading="eager" class="icon__img" />
         </div>
         <div class="dot"></div>
         <div class="text">
