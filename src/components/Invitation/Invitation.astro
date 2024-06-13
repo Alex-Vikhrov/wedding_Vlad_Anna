@@ -1,14 +1,5 @@
 ---
 import './style.scss';
-
-interface Props {
-  title?: string;
-  body?: string;
-  href?: string;
-}
-type PropsTimer = Partial<Props>;
-
-const { href, title, body } = Astro.props;
 ---
 
 <section class="invitation">
@@ -22,3 +13,5 @@ const { href, title, body } = Astro.props;
     с вами!
   </p>
 </section>
+
+<script src="./animate.ts"></script>

@@ -9,6 +9,7 @@ import Dresscode from '@components/Dresscode/Dresscode.astro';
 import Information from '@components/Informattion/Information.astro';
 import TimingDay from '@components/TimingDay/TimingDay.astro';
 import FeedbackForm from '@components/FeedbackForm/FeedbackForm.astro';
+import Calendar from '@components/Calendar/Calendar.astro';
 ---
 
 <Layout title="Wedding-Vlad-Anna">
@@ -16,13 +17,14 @@ import FeedbackForm from '@components/FeedbackForm/FeedbackForm.astro';
   <main>
     <section class="wrapper">
       <Invitation />
+      <Calendar />
       <TimingDay />
       <YandexMap />
       <Dresscode />
       <Carousel />
       <Information />
       <Wishes />
-      <FeedbackForm/>
+      <FeedbackForm />
     </section>
   </main>
 

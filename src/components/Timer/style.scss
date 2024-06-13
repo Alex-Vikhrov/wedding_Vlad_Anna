@@ -3,8 +3,9 @@
     margin-top: 460px;
 
     &__title {
+        font-family: 'Artemis cursive', sans-serif;
         font-weight: 500;
-        text-transform: uppercase;
+        text-transform: capitalize;
         font-size: 30px;
         color: #ffffff;
     }
@@ -15,17 +16,19 @@
     justify-content: space-between;
 }
 
-h2 {
-    font-family: 'Caravan', sans-serif;
+.numbers {
+    font-family: 'Artemis cursive', sans-serif;
     font-weight: 500;
-    font-size: 60px;
+    font-size: 30px;
     color: #ececec;
-    text-shadow: 2px 1px 5px rgb(252, 252, 252);
+    letter-spacing: 4.5px;
+    text-align: center;
 }
 
 span {
-    font-family: 'Caravan', sans-serif;
+    font-family: 'Artemis cursive', sans-serif;
+    font-weight: 500;
     color: #fff;
-    font-size: 40px;
+    font-size: 20px;
     letter-spacing: 0px;
 }

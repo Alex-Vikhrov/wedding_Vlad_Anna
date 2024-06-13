@@ -6,22 +6,24 @@
     margin: 70px 0px 30px 0px;
 
     & h2 {
-        font-family: "Great Vibes", cursive;
+        font-family: 'Artemis cursive', sans-serif;
+        text-transform: capitalize;
         font-weight: 400;
-        font-size: 55px;
-        margin-bottom: 50px;
+        font-size: 40px;
+        margin-bottom: 40px;
         color: #333;
-        padding: 0;
+        padding: 0px 10px;
         text-align: center;
     }
 
     & p {
-        font-family: "Playfair Display", sans-serif;
+        font-family: "Lora", sans-serif;
+        font-size: 1.1rem;
         font-weight: 400;
-        font-size: 1.2rem;
         letter-spacing: 1.4px;
         text-align: center;
-        margin-bottom: 60px;
+        margin-bottom: 40px;
+        color: #333333cc;
     }
 
     &__container-yandex {
@@ -39,10 +41,10 @@
     cursor: pointer;
     display: flex;
     justify-content: center;
-    font-family: "Playfair Display", sans-serif;
+    font-family: "Lora", sans-serif;
+    font-size: 1.1rem;
     font-weight: 400;
-    font-size: 1.2rem;
-    color: #333;
+    color: #333333cc;
     letter-spacing: 1.4px;
     text-align: center;
     border: 1px solid #AD8955;
