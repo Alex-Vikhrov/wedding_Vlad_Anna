@@ -27,7 +27,7 @@ form {
     position: absolute;
     z-index: 1;
     left: 0;
-    top: 5px;
+    top: 3px;
     transition: 0.3s;
 }
 
@@ -82,10 +82,13 @@ form {
 }
 
 .form-button {
+    font-family: "Lora", sans-serif;
+    text-transform: uppercase;
     margin-top: 20px;
     width: 300px;
     border: 1px solid #af7d33;
     background-color: #af7d33;
     padding: 5px 0px;
     color: #fff;
+    letter-spacing: 2.5px;
 }
