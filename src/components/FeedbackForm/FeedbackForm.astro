@@ -5,28 +5,19 @@ import './style.scss';
 ---
 
 <form id="feedback-form" action="https://formspree.io/f/xwkggzzq" method="POST">
-<h2 class="form-h2">Анкета гостя</h2>
+  <h2 class="form-h2">Анкета гостя</h2>
   <div class="form-group">
     <input
       required="required"
       class="form-control"
       type="text"
-      name="Имя"
+      name="Имя и Фамилия"
     />
-    <label class="form-label">Имя</label>
-  </div>
-  <div class="form-group">
-    <input
-      required="required"
-      class="form-control"
-      type="text"
-      name="Фамилия"
-    />
-    <label class="form-label">Фамилия</label>
+    <label class="form-label">Ваше Имя и Фамилия</label>
   </div>
   <label class="lll">
     Пожалуйста, подтвердите своё присутствие до 22.06.2024:
-    <select name="Присутствие" required>
+    <select class="form-select" name="Присутствие" required>
       <option value="Обязательно буду">Обязательно буду</option>
       <option value="Не смогу пойти">Не смогу пойти</option>
     </select>
@@ -41,12 +32,7 @@ import './style.scss';
     <label class="form-label">С кем вы пойдете на праздник?</label>
   </div>
   <div class="form-group">
-    <input
-      required="required"
-      class="form-control"
-      type="text"
-      name="Дети"
-    />
+    <input required="required" class="form-control" type="text" name="Дети" />
     <label class="form-label"> Будут ли с вами дети?</label>
   </div>
   <!-- <label>
@@ -54,7 +40,11 @@ import './style.scss';
     питания:
   </label> -->
   <div class="form-group">
-    <textarea required="required" class="form-control textarea" name="Диетические особенности" rows="4"></textarea>
+    <textarea
+      required="required"
+      class="form-control textarea"
+      name="Диетические особенности"
+      rows="4"></textarea>
     <label class="form-label">Особенности питания</label>
   </div>
 
@@ -89,125 +79,3 @@ import './style.scss';
     });
   });
 </script>
-
-<!-- <form id="feedback-form">
-  <label>
-    Имя:
-    <input type="text" name="firstName" required />
-  </label>
-  <label>
-    Фамилия:
-    <input type="text" name="lastName" required />
-  </label>
-  <label>
-    Пожалуйста, подтвердите своё присутствие до 22.06.2024:
-    <select name="attendance" required>
-      <option value="yes">Обязательно буду</option>
-      <option value="no">Не смогу пойти</option>
-    </select>
-  </label>
-  <label>
-    С кем вы пойдете на праздник?
-    <input type="text" name="companions" />
-  </label>
-  <label>
-    Будут ли с вами дети?
-    <input type="text" name="children" />
-  </label>
-  <label>
-    Уточните есть ли у вас аллергия на какие-то продукты или особенности
-    питания:
-    <textarea name="dietary" rows="4"></textarea>
-  </label>
-  <button type="submit">Отправить</button>
-</form> -->
-
-<!-- <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const form: any = document.getElementById('feedback-form');
-
-    form.addEventListener('submit', async function (event) {
-      event.preventDefault();
-
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData.entries());
-
-      const to = 'wedding.2025@mail.ru';
-      const subject = `Подтверждение присутствия от ${data.firstName} ${data.lastName}`;
-      const text = `
-      Имя: ${data.firstName}
-      Фамилия: ${data.lastName}
-      Присутствие: ${data.attendance}
-      Компаньоны: ${data.companions}
-      Дети: ${data.children}
-      Диетические ограничения: ${data.dietary}
-    `;
-
-      try {
-        const response = await fetch('../../pages/api/send', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            to: to,
-            subject: subject,
-            text: text,
-          }),
-        });
-
-        if (response.ok) {
-          alert('Email sent successfully!');
-        } else {
-          alert('Failed to send email.');
-        }
-      } catch (error) {
-        console.error('Error sending email:', error);
-        alert('Failed to send email.');
-      }
-    });
-  });
-</script> -->
-
-<!-- <script type="module">
-//   import sendMail from './sendMail';
-
-//   document.getElementById('feedback-form').addEventListener('submit', async (e) => {
-//     e.preventDefault();
-//     const formData = new FormData(e.target);
-//     const data = Object.fromEntries(formData.entries());
-    
-//     try {
-//       await sendMail(data);
-//       alert('Ваши данные успешно отправлены!');
-//     } catch (error) {
-//       alert('Произошла ошибка при отправке данных.');
-//     }
-//   });
-</script> -->
-
-<!-- <script type="module">
-  document.getElementById('feedback-form').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData.entries());
-
-    try {
-      const response = await fetch('/send-mail', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (response.ok) {
-        alert('Ваши данные успешно отправлены!');
-      } else {
-        alert('Произошла ошибка при отправке данных.');
-      }
-    } catch (error) {
-      alert('Произошла ошибка при отправке данных.');
-    }
-  });
-</script> -->
