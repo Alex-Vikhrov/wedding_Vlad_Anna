@@ -4,15 +4,17 @@ import './style.scss';
 import Midiy_1 from '../../../public/dress.jpg';
 import Midiy_2 from '../../../public/dress_women2.jpg';
 import Midiy_3 from '../../../public/dress_man2.jpg';
+import Modal_Midiy_2 from '../../../public/dress_women.jpg';
+import Modal_Midiy_3 from '../../../public/dress_man.jpg';
 ---
-      <!-- <img
+
+<!-- <img
         src="/public/dress.jpg"
         alt="midiy_1"
         class="d-block w-100"
         data-bs-toggle="modal"
         data-bs-target="#imageModal1"
-      /> -->
-<!-- <Image src={Midiy_1} alt="midiy_1" loading="eager" class="d-block w-100"/> --><!-- <Image src={Midiy_2} alt="midiy_1" loading="eager" class="d-block w-100"/> --><!-- <Image src={Midiy_3} alt="midiy_1" loading="eager" class="d-block w-100"/> --><!-- data-bs-ride="carousel" -->
+      /> --><!-- <Image src={Midiy_1} alt="midiy_1" loading="eager" class="d-block w-100"/> --><!-- <Image src={Midiy_2} alt="midiy_1" loading="eager" class="d-block w-100"/> --><!-- <Image src={Midiy_3} alt="midiy_1" loading="eager" class="d-block w-100"/> --><!-- data-bs-ride="carousel" -->
 <div
   id="carouselExampleFade"
   class="carousel slide carousel-fade"
@@ -107,7 +109,7 @@ import Midiy_3 from '../../../public/dress_man2.jpg';
           aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <img src="/public/dress.jpg" alt="midiy_1" class="img-fluid" />
+        <Image src={Midiy_1} alt="midiy_2" class="img-fluid" />
       </div>
     </div>
   </div>
@@ -130,7 +132,7 @@ import Midiy_3 from '../../../public/dress_man2.jpg';
           aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <img src="/public/dress_women.jpg" alt="midiy_2" class="img-fluid" />
+        <Image src={Modal_Midiy_2} alt="midiy_2" class="img-fluid" />
       </div>
     </div>
   </div>
@@ -153,7 +155,7 @@ import Midiy_3 from '../../../public/dress_man2.jpg';
           aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <img src="/public/dress_man.jpg" alt="midiy_3" class="img-fluid" />
+        <Image src={Modal_Midiy_3} alt="midiy_3" class="img-fluid" />
       </div>
     </div>
   </div>
