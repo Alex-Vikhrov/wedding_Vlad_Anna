@@ -5,7 +5,13 @@ import Midiy_1 from '../../../public/dress.jpg';
 import Midiy_2 from '../../../public/dress_women2.jpg';
 import Midiy_3 from '../../../public/dress_man2.jpg';
 ---
-
+      <!-- <img
+        src="/public/dress.jpg"
+        alt="midiy_1"
+        class="d-block w-100"
+        data-bs-toggle="modal"
+        data-bs-target="#imageModal1"
+      /> -->
 <!-- <Image src={Midiy_1} alt="midiy_1" loading="eager" class="d-block w-100"/> --><!-- <Image src={Midiy_2} alt="midiy_1" loading="eager" class="d-block w-100"/> --><!-- <Image src={Midiy_3} alt="midiy_1" loading="eager" class="d-block w-100"/> --><!-- data-bs-ride="carousel" -->
 <div
   id="carouselExampleFade"
@@ -33,34 +39,34 @@ import Midiy_3 from '../../../public/dress_man2.jpg';
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <!-- <img
-        src="/public/dress.jpg"
+      <Image
+        src={Midiy_1}
         alt="midiy_1"
+        loading="eager"
         class="d-block w-100"
         data-bs-toggle="modal"
         data-bs-target="#imageModal1"
-      /> -->
-      <Image src={Midiy_1} alt="midiy_1" loading="eager" class="d-block w-100"/>
+      />
     </div>
     <div class="carousel-item">
-      <!-- <img
-        src="/public/dress_women2.jpg"
-        alt="midiy_2"
+      <Image
+        src={Midiy_2}
+        alt="midiy_1"
+        loading="eager"
         class="d-block w-100"
         data-bs-toggle="modal"
         data-bs-target="#imageModal2"
-      /> -->
-      <Image src={Midiy_2} alt="midiy_1" loading="eager" class="d-block w-100"/>
+      />
     </div>
     <div class="carousel-item">
-      <!-- <img
-        src="/public/dress_man2.jpg"
-        alt="midiy_3"
+      <Image
+        src={Midiy_3}
+        alt="midiy_1"
+        loading="eager"
         class="d-block w-100"
         data-bs-toggle="modal"
         data-bs-target="#imageModal3"
-      /> -->
-      <Image src={Midiy_3} alt="midiy_1" loading="eager" class="d-block w-100"/>
+      />
     </div>
   </div>
   <button
