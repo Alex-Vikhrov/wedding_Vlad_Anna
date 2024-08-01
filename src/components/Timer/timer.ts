@@ -13,6 +13,15 @@ const weddingDate: Date = new Date(`August 02 ${currentYear} 00:00:00`);
 const updateCounter = () => {
   const currentTime: Date = new Date();
   const diff = weddingDate.getTime() - currentTime.getTime();
+  
+  if (diff <= 0) {
+    clearInterval(timerInterval);
+    daysElement.innerText = '00';
+    hoursElement.innerText = '00';
+    minutesElement.innerText = '00';
+    secondsElement.innerText = '00';
+    return;
+  }
 
   const days = Math.floor(diff / 1000 / 60 / 60 / 24);
   const hours = Math.floor(diff / 1000 / 60 / 60) % 24;
@@ -27,6 +36,4 @@ const updateCounter = () => {
 
 updateCounter();
 
-setInterval(updateCounter, 1000);
-
-
+const timerInterval = setInterval(updateCounter, 1000);
